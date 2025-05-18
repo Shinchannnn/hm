@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./image/logo4.png" alt="Logo" />
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="customers.html">Happy Customers</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contact" class="contact-section">
+        <div class="contact-details">
+          <h1>Contact Us</h1>
+          <p>Feel free to reach out to us for any inquiries or support.</p>
+          <ul>
+            <li><strong>Email:</strong> healthmedihub@gmail.com</li>
+            <li><strong>Phone:</strong> +91 7838583810</li>
+            <li><strong>Address:</strong> Ramnagaria,Sirsa,Kelnian,Haryana, India</li>
+          </ul>
+
+<div class="map-icon-container">
+  <a href="https://maps.app.goo.gl/Xb6N6xSAW2JT6Xmf7" target="_blank" class="map-icon-link">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>View Directions on Google Maps</span>
+  </a>
+</div>
+
+        </div>
+
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form id="contact-form">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-media">
+          <div>
+            <a href="https://www.linkedin.com/authwall?trkInfo=AQFyRBXogyZWJgAAAZX2PcCI_E437lcwSrB1haP4tFrHJk0w83MGp_Ffb8b0DfYxR7pmexQPf0CHupUEwiY-z5Xhzm6vqkKm4uMB34r5ZOWS93dBXYyERhXnur6NGB2s5QjcMfo=&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fhealth-plus-medihub-84b37024b%2F" target="_blank"
+              ><img src="./image/in.png"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/@healthmedihub9000" target="_blank"
+              ><img src="./image//yt.png"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/p/Health-Medihub-100085226002783/" target="_blank"
+              ><img src="./image/fc.png"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.indiamart.com/health-medihub/" target="_blank"
+              ><img src="./image/instamart.png"
+            /></a>
+          </div>
+        </div>
+        <p>&copy; 2024 Health + Medihub. All Rights Reserved.</p>
+      </div>
+  </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("7FoAA-6BJd17odKwh"); // Replace with your EmailJS Public Key
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Get user input
+          const userEmail = document.getElementById("email").value;
+          const userMessage = document.getElementById("message").value;
+
+          // Validate input
+          if (!userEmail || !userMessage) {
+            Swal.fire("Error", "Please fill in all fields.", "error");
+            return;
+          }
+
+          // EmailJS Configuration
+          const serviceID = "service_isezoxi"; // Replace with your actual EmailJS service ID
+          const templateID = "template_0fag15d"; // Replace with your actual EmailJS template ID
+
+          // Send email using EmailJS
+          emailjs.send(serviceID, templateID, {
+            user_email: userEmail, // Ensure this matches your EmailJS template variable
+            message: userMessage, // Ensure this matches your EmailJS template variable
+          })
+          .then(() => {
+            Swal.fire("Success!", "We have received your message.", "success");
+            document.getElementById("contact-form").reset(); // Clear form
+          })
+          .catch((error) => {
+            Swal.fire("Error", "Something went wrong. Please try again.", "error");
+            console.error("EmailJS Error:", error);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

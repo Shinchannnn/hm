@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Health+ Medihub</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <h></h>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <img src="./image/logo4.png" alt="Health + Medihub Logo" />
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="customers.html">Happy Customers</a>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <div class="intro-section">
+      <h1>Welcome to Health+ Medihub</h1>
+      <p>
+        Your Trusted Partner in Medical Equipment Trading and Regulatory
+        Consultancy
+      </p>
+      <p>
+        At Health+ Medihub, we bridge the gap between healthcare providers and
+        premium medical equipment, ensuring access to the industry's best tools.
+        Our mission is to empower healthcare facilities with high-quality
+        devices and expert guidance to meet their operational and regulatory
+        needs.
+      </p>
+    </div>
+    <div class="what-we-offer">
+      <h2>What We Offer</h2>
+      <div class="offer-container">
+        <!-- Offer 1 -->
+        <div class="offer-item">
+          <img src="./image/equipment.jpeg" alt="Medical Equipment Trading" />
+          <h3>Medical Equipment Trading</h3>
+          <p>
+            Sourcing top-notch medical devices to enhance healthcare delivery.
+          </p>
+        </div>
+        <!-- Offer 2 -->
+        <div class="offer-item">
+          <img src="./image/consultancy.png" alt="Regulatory Consultancy" />
+          <h3>Regulatory Consultancy</h3>
+          <p>
+            Simplifying the complexities of medical regulations through expert
+            advice on compliance, market entry strategies, and product
+            selection.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Section with Images and Text -->
+    <div class="image-section">
+      <div class="image-item">
+        <h3>Our Mission</h3>
+        <img src="./image/png1.png" alt="Mission Image" />
+        <p>
+          "At Health+ Medihub, our mission is to empower healthcare providers
+          with access to high-quality medical equipment and expert regulatory
+          consultancy services. We are committed to ensuring the safety,
+          efficacy, and compliance of healthcare solutions, helping our clients
+          navigate the complexities of regulatory requirements to enhance
+          patient care and achieve operational excellence."
+        </p>
+      </div>
+      <div class="image-item">
+        <h3>Our Approach</h3>
+        <img src="./image/img3.png" alt="Approach Image" />
+        <p>
+          At Health+ Medihub, we are committed to providing customized,
+          end-to-end solutions that are designed to meet the specific needs of
+          your healthcare organization. Our client-centric approach begins with
+          a comprehensive understanding of your unique challenges and goals,
+          allowing us to deliver precise, efficient, and cost-effective
+          solutions. We prioritize building strong, lasting relationships with
+          our clients, offering personalized support at every step—whether it's
+          selecting the right medical equipment or ensuring full regulatory
+          compliance. Our approach is grounded in collaboration, transparency,
+          and integrity, ensuring we consistently meet and surpass your
+          expectations.
+        </p>
+      </div>
+      <div class="image-item">
+        <h3>Our Expertise</h3>
+        <img src="./image/img4.png" alt="Expertise Image" />
+        <p>
+          With extensive expertise in both medical equipment supply and
+          regulatory affairs consultancy, our team offers a distinct advantage
+          in the healthcare sector. We specialize in sourcing top-tier medical
+          equipment, ensuring you have access to the most advanced and reliable
+          products. Our comprehensive regulatory consulting services help you
+          navigate the complex and ever-changing landscape of healthcare laws
+          and regulations, ensuring your organization remains fully compliant.
+          Led by a diverse team of industry professionals, engineers, and
+          regulatory consultants, we bring decades of collective experience to
+          deliver innovative solutions that enhance operational efficiency,
+          safeguard compliance, and improve patient outcomes..
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+              <div>
+                <a href="https://www.linkedin.com/authwall?trkInfo=AQFyRBXogyZWJgAAAZX2PcCI_E437lcwSrB1haP4tFrHJk0w83MGp_Ffb8b0DfYxR7pmexQPf0CHupUEwiY-z5Xhzm6vqkKm4uMB34r5ZOWS93dBXYyERhXnur6NGB2s5QjcMfo=&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fhealth-plus-medihub-84b37024b%2F" target="_blank"
+                  ><img src="./image/in.png"
+                /></a>
+              </div>
+              <div>
+                <a href="https://www.youtube.com/@healthmedihub9000" target="_blank"
+                  ><img src="./image//yt.png"
+                /></a>
+              </div>
+              <div>
+                <a href="https://www.facebook.com/p/Health-Medihub-100085226002783/" target="_blank"
+                  ><img src="./image/fc.png"
+                /></a>
+              </div>
+              <div>
+                <a href="https://www.indiamart.com/health-medihub/" target="_blank"
+                  ><img src="./image/instamart.png"
+                /></a>
+              </div>
+            </div>
+            <p>&copy; 2024 Health + Medihub. All Rights Reserved.</p>
+          </div>
+      </div>
+    </footer>
+    <script>
+      // Apply animation when elements enter the viewport
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(
+          ".image-item, .offer-item, .intro-section, .what-we-offer h2"
+        );
+
+        const observerOptions = {
+          root: null, // Viewport
+          threshold: 0.1, // Trigger animation when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target); // Stop observing once animated
+            }
+          });
+        }, observerOptions);
+
+        // Add the 'hidden' class initially and observe each element
+        animatedElements.forEach((el) => {
+          el.classList.add("hidden");
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

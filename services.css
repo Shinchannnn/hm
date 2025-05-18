@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Black background for entire page */
+  color: white; /* Text color set to white for readability */
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white; /* White background for header */
+  padding: 10px 20px; /* Padding adjusted to maintain small header height */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100px; /* Fixed height for header */
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  height: 150%; /* Ensure logo container takes the full header height */
+}
+
+.header .logo img {
+  height: 150%; /* Increase logo height */
+  width: auto;
+  margin-right: 30px; /* Adjusted spacing between logo and nav */
+}
+
+.header .nav {
+  display: flex;
+  gap: 15px; /* Equal spacing between links */
+  align-items: center; /* Vertically center nav links */
+}
+
+.nav a {
+  color: black; /* Black text color for navigation links */
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Main Content */
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.services-header {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #0a0808; /* Lighter text color for header */
+}
+
+.services-section {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-item {
+  width: 500px !important;
+  height: 200px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h1 {
+  margin-bottom: 10px;
+}
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Animation for Service Items */
+.service-item:nth-child(1) {
+  animation: fadeIn 0.5s ease-out 0.2s forwards;
+}
+
+.service-item:nth-child(2) {
+  animation: fadeIn 0.5s ease-out 0.6s forwards;
+}
+
+.service-item:nth-child(3) {
+  animation: fadeIn 0.5s ease-out 1s forwards;
+}
+
+.service-item:nth-child(4) {
+  animation: fadeIn 0.5s ease-out 1.4s forwards;
+}
+
+.service-item:nth-child(5) {
+  animation: fadeIn 0.5s ease-out 1.8s forwards;
+}
+
+.service-item:nth-child(6) {
+  animation: fadeIn 0.5s ease-out 2.2s forwards;
+}
+
+.service-item:nth-child(7) {
+  animation: fadeIn 0.5s ease-out 2.6s forwards;
+}
+
+.service-item:nth-child(8) {
+  animation: fadeIn 0.5s ease-out 3s forwards;
+}
+
+.service-item:nth-child(9) {
+  animation: fadeIn 0.5s ease-out 3.4s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* Footer */
+.footer-content {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}
